@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
+
 import {
   Card,
   CardContent,
@@ -26,6 +27,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
 import useFetch from "@/hooks/use-fetch";
 import { onboardingSchema } from "@/app/lib/schema";
 import { updateUser } from "@/action/user";
@@ -76,8 +78,8 @@ const OnboardingForm = ({ industries }) => {
   const watchIndustry = watch("industry");
 
   return (
-    <div className="flex items-center justify-center bg-background">
-      <Card className="w-full max-w-lg mt-10 mx-2">
+    <div className="flex items-center justify-center bg-background min-h-screen overflow-visible">
+      <Card className="w-full max-w-lg mt-10 mx-2 overflow-visible relative z-0">
         <CardHeader>
           <CardTitle className="gradient-title text-4xl">
             Complete Your Profile
@@ -89,7 +91,8 @@ const OnboardingForm = ({ industries }) => {
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-            <div className="space-y-2">
+            {/* Industry */}
+            <div className="space-y-2 z-0 relative">
               <Label htmlFor="industry">Industry</Label>
               <Select
                 onValueChange={(value) => {
@@ -100,10 +103,10 @@ const OnboardingForm = ({ industries }) => {
                   setValue("subIndustry", "");
                 }}
               >
-                <SelectTrigger id="industry">
+                <SelectTrigger id="industry" className="relative z-10">
                   <SelectValue placeholder="Select an industry" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="z-[9999]">
                   <SelectGroup>
                     <SelectLabel>Industries</SelectLabel>
                     {industries.map((ind) => (
@@ -121,16 +124,17 @@ const OnboardingForm = ({ industries }) => {
               )}
             </div>
 
+            {/* Sub-Industry */}
             {watchIndustry && (
-              <div className="space-y-2">
+              <div className="space-y-2 z-0 relative">
                 <Label htmlFor="subIndustry">Specialization</Label>
                 <Select
                   onValueChange={(value) => setValue("subIndustry", value)}
                 >
-                  <SelectTrigger id="subIndustry">
+                  <SelectTrigger id="subIndustry" className="relative z-10">
                     <SelectValue placeholder="Select your specialization" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="z-[9999]">
                     <SelectGroup>
                       <SelectLabel>Specializations</SelectLabel>
                       {selectedIndustry?.subIndustries.map((sub) => (
@@ -149,6 +153,7 @@ const OnboardingForm = ({ industries }) => {
               </div>
             )}
 
+            {/* Experience */}
             <div className="space-y-2">
               <Label htmlFor="experience">Years of Experience</Label>
               <Input
@@ -166,6 +171,7 @@ const OnboardingForm = ({ industries }) => {
               )}
             </div>
 
+            {/* Skills */}
             <div className="space-y-2">
               <Label htmlFor="skills">Skills</Label>
               <Input
@@ -181,6 +187,7 @@ const OnboardingForm = ({ industries }) => {
               )}
             </div>
 
+            {/* Bio */}
             <div className="space-y-2">
               <Label htmlFor="bio">Professional Bio</Label>
               <Textarea
@@ -194,6 +201,7 @@ const OnboardingForm = ({ industries }) => {
               )}
             </div>
 
+            {/* Submit */}
             <Button type="submit" className="w-full" disabled={updateLoading}>
               {updateLoading ? (
                 <>

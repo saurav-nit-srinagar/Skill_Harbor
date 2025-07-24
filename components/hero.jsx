@@ -31,15 +31,13 @@ const Herosection = () => {
       <div className="space-y-6 text-center">
         <div className="space-y-6 mx-auto">
           <h1 className="gradient-title text-5xl font-bold md:text-6xl lg:text-7xl xl:text-8xl">
-            Your AI Mentor for Skill Development
-            <br />
-            professional growth, and career advancement
+          Unlock Your Potential with AI-Driven Skill Building and Career Guidance.
           </h1>
-          <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">SkillHarbor is your AI-powered mentor, guiding you through</p>
+          <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl">SkillHarbor: AI Mentorship That Inspires, Guides, and Grows With You</p>
         </div>
         <div className="flex justify-center space-x-4">
           <Link href="/dashboard">
-            <Button size={"lg"} className={"px-8"}>
+            <Button size={"lg"} className="px-8 py-3 bg-white text-black rounded">
               Get Started
             </Button>
           </Link>
@@ -52,7 +50,7 @@ const Herosection = () => {
         <div className="hero-image-wrapper mt-5 md:mt-0">
           <div ref={imageRef} className="hero-image">
             <Image
-              src="/banner.jpeg"
+              src="/banner1.jpeg"
               width={1280}
               height={720}
               alt="Dashboard Preview"

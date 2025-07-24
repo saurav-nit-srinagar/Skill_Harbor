@@ -1,5 +1,6 @@
-// components/header.jsx
-import React from "react";
+"use client"; // Add this at the very top
+
+import React, { useEffect } from "react";
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,17 +19,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { checkUser } from "@/lib/checkUser";
 
-const Header = async () => {
-  await checkUser();
+const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full border-b bg-background/80 backdrop-blur-md z-50">
       <nav className="container mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/cover.png"
+            src="/LOGO2.png"
             alt="SkillHarbor Logo"
             width={200}
             height={60}
@@ -59,13 +58,16 @@ const Header = async () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuItem asChild>
-                  <Link href="/resume-builder" className="flex items-center gap-2">
+                  <Link href="/resume" className="flex items-center gap-2">
                     <FileText className="h-4 w-4" />
                     <span>Build Resume</span>
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link href="/ai-cover-letter" className="flex items-center gap-2">
+                  <Link
+                    href="/ai-cover-letter"
+                    className="flex items-center gap-2"
+                  >
                     <Pen className="h-4 w-4" />
                     <span>Cover Letter</span>
                   </Link>
@@ -97,7 +99,7 @@ const Header = async () => {
                   userPreviewMainIdentifier: "font-bold",
                 },
               }}
-              afterSignOutUrl="/"
+              fallbackRedirectUrl="/"
             />
           </SignedIn>
         </div>
