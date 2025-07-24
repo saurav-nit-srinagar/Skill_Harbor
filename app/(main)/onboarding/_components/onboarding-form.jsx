@@ -50,33 +50,28 @@ const OnboardingForm = ({ industries }) => {
     resolver: zodResolver(onboardingSchema),
   });
 
- const onSubmit = async (values) => {
-  try {
-    const formattedIndustry = `${values.industry}-${values.subIndustry
-      .toLowerCase()
-      .replace(/ /g, "-")}`;
+  const onSubmit = async (values) => {
+    try {
+      const formattedIndustry = `${values.industry}-${values.subIndustry
+        .toLowerCase()
+        .replace(/ /g, "-")}`;
 
-    const result = await updateUserFn({
-      ...values,
-      industry: formattedIndustry,
-    });
-
-    console.log("✅ User updated successfully", result); // 👈 this shows in browser console
-  } catch (error) {
-    console.error("❌ Onboarding error:", error);
-  }
-};
-
+      await updateUserFn({
+        ...values,
+        industry: formattedIndustry,
+      });
+    } catch (error) {
+      console.error("Onboarding error:", error);
+    }
+  };
 
   useEffect(() => {
-  if (updateResult?.success && !updateLoading) {
-    console.log("✅ updateResult from useFetch", updateResult); // 👈 Optional
-    toast.success("Profile completed successfully!");
-    router.push("/dashboard");
-    router.refresh();
-  }
-}, [updateResult, updateLoading]);
-
+    if (updateResult?.success && !updateLoading) {
+      toast.success("Profile completed successfully!");
+      router.push("/dashboard");
+      router.refresh();
+    }
+  }, [updateResult, updateLoading]);
 
   const watchIndustry = watch("industry");
 
@@ -199,7 +194,7 @@ const OnboardingForm = ({ industries }) => {
               )}
             </div>
 
-            <Button  type="submit" className="w-full" disabled={updateLoading}>
+            <Button type="submit" className="w-full" disabled={updateLoading}>
               {updateLoading ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
