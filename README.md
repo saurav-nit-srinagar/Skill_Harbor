@@ -1,69 +1,69 @@
-<div align="center">
-  <h1>🌟 Skill Harbor</h1>
-  <p>A modern platform empowering individuals to build, showcase, and grow their skills with confidence.</p>
-  <img src="https://img.shields.io/github/license/saurav-nit-srinagar/Skill_Harbor?style=for-the-badge" />
-  <img src="https://img.shields.io/github/languages/top/saurav-nit-srinagar/Skill_Harbor?style=for-the-badge" />
-  <img src="https://img.shields.io/github/deployments/saurav-nit-srinagar/Skill_Harbor/production?label=vercel&style=for-the-badge" />
-</div>
+# 🌟 Skill Harbor – Career Guidance & Skill Development Platform
+
+Skill Harbor is a modern web platform that empowers individuals to **build**, **showcase**, and **grow** their skills with confidence. Designed with a sleek UI and packed with powerful features, it's your one-stop solution for career advancement.
 
 ---
 
-## 🚀 Live Demo
+## 🚀 Live Deployment
 
-🔗 [Visit Skill Harbor on Vercel](https://skillharbor.vercel.app/)
+🔗 [Skill Harbor](https://skill-harbor.vercel.app)
 
 ---
 
 ## 📸 Screenshots
 
+> *(Replace these placeholders with actual screenshots)*
+
 | Sign In / Sign Up | Resume Builder | Dashboard |
 |-------------------|----------------|-----------|
-| ![signin](https://placehold.co/300x200?text=Sign+In) | ![resume](https://placehold.co/300x200?text=Resume+Builder) | ![dashboard](https://placehold.co/300x200?text=Dashboard) |
-
-> You can replace the placeholder images with real screenshots later.
+| ![signin](public/screenshots/signin.png) | ![resume](public/screenshots/resume.png) | ![dashboard](public/screenshots/dashboard.png) |
 
 ---
 
 ## 🧠 Features
 
-- 🔐 **Authentication with Clerk**
-- 📄 **AI-powered Resume Builder**
-- 🎯 **Skill Showcase Dashboard**
-- 📊 **Charts and Progress Tracker**
-- 🎨 **Light & Dark Themes**
-- 🌐 **Responsive UI using Tailwind CSS**
-- 🤖 **Integrated Gemini API for AI capabilities**
+- 🔐 **Secure Authentication** via Clerk
+- 🧾 **AI-Powered Resume Builder** for quick and professional CVs
+- 💼 **Skill Showcase Dashboard** with editable profile and achievements
+- 📈 **Interactive Charts** to visualize growth
+- 🌗 **Light & Dark Mode** support
+- 📱 **Fully Responsive UI** built with Tailwind CSS
+- 🤖 **AI Integration** via Google Gemini API
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js (App Router + Turbopack)
-- **Auth**: Clerk
-- **Database**: PostgreSQL (Neon) with Prisma
-- **Styling**: Tailwind CSS + Radix UI
-- **Charts**: Recharts
-- **Forms**: React Hook Form + Zod
-- **AI Integration**: Google Generative AI (Gemini)
-- **PDF Export**: (Optional) html2pdf.js or @react-pdf/renderer
+| Category        | Technologies Used                                      |
+|-----------------|--------------------------------------------------------|
+| **Frontend**    | Next.js (App Router + Turbopack), Tailwind CSS         |
+| **Backend**     | Prisma ORM, PostgreSQL (via Neon)                      |
+| **Auth**        | Clerk                                                  |
+| **Styling/UI**  | Tailwind CSS, Radix UI                                 |
+| **Forms**       | React Hook Form + Zod                                  |
+| **Charts**      | Recharts                                               |
+| **AI Services** | Google Generative AI (Gemini)                          |
+| **PDF Export**  | (Optional) `html2pdf.js` / `@react-pdf/renderer`       |
 
 ---
 
 ## 🧪 Getting Started
 
+Follow these steps to run the project locally:
+
 ```bash
-# Clone the repository
+# 1. Clone the repository
 git clone https://github.com/saurav-nit-srinagar/Skill_Harbor.git
 
-# Navigate into the directory
+# 2. Navigate to the project directory
 cd Skill_Harbor
 
-# Install dependencies
+# 3. Install dependencies
 npm install
 
-# Setup environment variables
+# 4. Set up environment variables
 cp .env.example .env.local
-# Then open .env.local and fill in required API keys
+# Then open .env.local and add your API keys (Clerk, Gemini, DB URL, etc.)
 
-# Run the app in development mode
+# 5. Run the development server
 npm run dev
