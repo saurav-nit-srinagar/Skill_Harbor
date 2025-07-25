@@ -1,69 +1,99 @@
-# 🌟 Skill Harbor – Career Guidance & Skill Development Platform
+# 🌟 Skill Harbor – Empowering Skills. Enabling Careers.
 
-Skill Harbor is a modern web platform that empowers individuals to **build**, **showcase**, and **grow** their skills with confidence. Designed with a sleek UI and packed with powerful features, it's your one-stop solution for career advancement.
-
----
-
-## 🚀 Live Deployment
-
-🔗 [Skill Harbor](https://skill-harbor.vercel.app)
+**Skill Harbor** is a modern, AI-powered career development platform that enables users to **build**, **showcase**, and **enhance** their professional skills. From creating intelligent resumes to visualizing growth and achievements, the platform is designed to help individuals navigate their career journey with confidence.
 
 ---
 
-## 📸 Screenshots
+## 🌐 Live Deployment
 
-> *(Replace these placeholders with actual screenshots)*
-
-| Sign In / Sign Up | Resume Builder | Dashboard |
-|-------------------|----------------|-----------|
-| ![signin](public/screenshots/signin.png) | ![resume](public/screenshots/resume.png) | ![dashboard](public/screenshots/dashboard.png) |
+🔗 Visit: [Skill Harbor on Vercel](https://skill-harbor.vercel.app)
 
 ---
 
-## 🧠 Features
+## 📌 Table of Contents
 
-- 🔐 **Secure Authentication** via Clerk
-- 🧾 **AI-Powered Resume Builder** for quick and professional CVs
-- 💼 **Skill Showcase Dashboard** with editable profile and achievements
-- 📈 **Interactive Charts** to visualize growth
-- 🌗 **Light & Dark Mode** support
-- 📱 **Fully Responsive UI** built with Tailwind CSS
-- 🤖 **AI Integration** via Google Gemini API
-
----
-
-## 🛠️ Tech Stack
-
-| Category        | Technologies Used                                      |
-|-----------------|--------------------------------------------------------|
-| **Frontend**    | Next.js (App Router + Turbopack), Tailwind CSS         |
-| **Backend**     | Prisma ORM, PostgreSQL (via Neon)                      |
-| **Auth**        | Clerk                                                  |
-| **Styling/UI**  | Tailwind CSS, Radix UI                                 |
-| **Forms**       | React Hook Form + Zod                                  |
-| **Charts**      | Recharts                                               |
-| **AI Services** | Google Generative AI (Gemini)                          |
-| **PDF Export**  | (Optional) `html2pdf.js` / `@react-pdf/renderer`       |
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 ---
 
-## 🧪 Getting Started
+## ✨ Features
 
-Follow these steps to run the project locally:
+- 🔐 **Clerk Authentication** for secure sign-up and sign-in
+- 🧠 **AI-powered Resume Builder** to create polished resumes in seconds
+- 📊 **Skill Dashboard** to visualize progress and track learning milestones
+- 🎓 **Skill Showcase** to present personal strengths and projects
+- 🌗 **Light & Dark Themes** for accessibility and comfort
+- 📱 **Responsive Design** for optimal experience across all devices
+- 🤖 **Google Gemini Integration** for intelligent suggestions and enhancements
+
+---
+
+## 🛠️ Tech Stack & Tools
+
+A comprehensive overview of technologies used in the Skill Harbor platform:
+
+### ⚙️ Frontend
+
+| Tool/Library          | Purpose                                                       |
+|-----------------------|---------------------------------------------------------------|
+| **Next.js**           | Framework for server-side rendering and routing (App Router + Turbopack) |
+| **React**             | Declarative UI and component management                       |
+| **Tailwind CSS**      | Utility-first CSS framework for fast styling                  |
+| **Radix UI**          | Unstyled and accessible component primitives                  |
+| **Framer Motion**     | Smooth animations and transitions                             |
+
+### 🔐 Authentication
+
+| Tool     | Description                                  |
+|----------|----------------------------------------------|
+| **Clerk** | Secure user authentication and session handling |
+
+### 📄 Forms & Validation
+
+| Tool               | Role                                          |
+|--------------------|-----------------------------------------------|
+| **React Hook Form**| Simplified form handling                      |
+| **Zod**            | Schema-based input validation                 |
+
+### 🤖 AI Integration
+
+| Tool                | Purpose                                     |
+|---------------------|---------------------------------------------|
+| **Google Gemini API** | Generates smart suggestions for resumes and content |
+
+### 💾 Backend & Database
+
+| Tool               | Description                                   |
+|--------------------|-----------------------------------------------|
+| **Prisma ORM**     | Type-safe database client for database access |
+| **PostgreSQL (Neon)** | Cloud-hosted relational database             |
+
+### 📈 Charts & Analytics
+
+| Tool         | Purpose                                           |
+|--------------|---------------------------------------------------|
+| **Recharts** | Visual representation of skills and performance metrics |
+
+### 📄 PDF Export (Optional)
+
+| Tool                            | Role                           |
+|---------------------------------|--------------------------------|
+| `html2pdf.js` / `@react-pdf/renderer` | Convert resumes into downloadable PDFs |
+
+---
+
+## 🚀 Getting Started
+
+To run the project locally, follow these steps:
+
+### 1️⃣ Clone the Repository
 
 ```bash
-# 1. Clone the repository
 git clone https://github.com/saurav-nit-srinagar/Skill_Harbor.git
-
-# 2. Navigate to the project directory
 cd Skill_Harbor
-
-# 3. Install dependencies
-npm install
-
-# 4. Set up environment variables
-cp .env.example .env.local
-# Then open .env.local and add your API keys (Clerk, Gemini, DB URL, etc.)
-
-# 5. Run the development server
-npm run dev
