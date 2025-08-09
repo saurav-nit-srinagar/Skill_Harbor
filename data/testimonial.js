@@ -3,7 +3,7 @@ export const testimonial = [
     quote:
       "The AI-powered interview prep was a game-changer. Landed my dream job at a top tech company!",
     author: "Saurav Kumar",
-    image: "https://randomuser.me/api/portraits/women/79.jpg",
+    image: "https://randomuser.me/api/portraits/med/men/75.jpg",
     role: "Software Engineer",
     company: "TechNova.",
   },
@@ -13,14 +13,14 @@ export const testimonial = [
     author: "Ankur Tiwari",
     image: "https://randomuser.me/api/portraits/men/75.jpg",
     role: "Product Manager",
-    company: "StartUp Inc.",
+    company: "EdgeWorks.",
   },
   {
     quote:
       "My resume's ATS score improved significantly. Got more interviews in two weeks than in six months!",
-    author: "Priya Patel",
+    author: "Krishna Thakre",
     image: "https://randomuser.me/api/portraits/women/74.jpg",
     role: "Marketing Director",
-    company: "Global Corp",
+    company: "TECHWORLD",
   },
 ];
